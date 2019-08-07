@@ -1,0 +1,50 @@
+h1{
+  font-family: serif;
+  color: #598311;
+  padding-top: 40px;
+  font-size: 50px;
+  font-weight: bold;
+}
+input.form-control {
+  margin: 20px 0;
+}
+
+button.btn {
+  margin: 10px 0 20px 0;
+}
+
+textarea{
+  height: 150px !important;
+}
+
+#btn-post-job {
+  padding: 10px 0;
+  width: 100%;
+  background-color: #fff;
+  color: #2291D1;
+  border: 2px solid #2291D1;
+  margin-bottom: 20px;
+
+
+}
+
+#btn-post-job:hover{
+  background-color: #2291D1;
+  color: #fff;
+  border-radius: 5px;
+}
+
+
+#btn-submit-job{
+  padding: 10px 0;
+  width: 100%;
+  background-color: #fff;
+  color: #DEAE2A;
+  border: 2px solid #DEAE2A;
+}
+
+#btn-submit-job:hover{
+  background-color: #DEAE2A;
+  color: #fff;
+  border-radius: 5px;
+}

@@ -2,31 +2,61 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/findwork.css">
     <title>Findwork</title>
   </head>
-  <h1>Findwork</h1>
 
 
-    <input id="searchByKeyword" type="text" name="" placeholder="Search by keyword">
-    <input id="searchByLocation" type="text" name="" placeholder="location / city">
+  <div class="container">
+    <div class="container">
+    <h1>Findwork</h1>
 
-    <button id="btn-post-job">Post Job</button>
-    <form id="post-job">
-      <input type="text" name="title" placeholder="title">
-      <input type="text" name="location" placeholder="location">
-      <input type="text" name="decription" placeholder="decription">
-      <input type="text" name="type" placeholder="type">
-      <button>Post</button>
-    </form>
+      <div class="form-row">
+        <div class="col">
+          <input class="form-control" id="searchByKeyword" type="text" name="" placeholder="Search by keyword">
+        </div>
+        <div class="col">
+          <input class="form-control" id="searchByLocation" type="text" name="" placeholder="location / city">
+        </div>
+      </div>
 
-  <div id='search-result'>
+      <button id="btn-post-job">Post Job</button>
+      <form id="post-job">
+        <input class="form-control" type="text" name="title" placeholder="title">
+        <input class="form-control" type="text" name="location" placeholder="location">
+        <textarea class="form-control description" type="text" name="description" placeholder="description"></textarea>
+        <input class="form-control" type="text" name="type" placeholder="type">
+        <button id="btn-submit-job">Submit</button>
+      </form>
+
+    <div id='search-result'>
+
+    </div>
+
+    <div class="card" style="width: 100%">
+      <div class="card-body">
+        <h5 id="search-result-title" class="card-title"></h5>
+        <h6 id="search-result-Location" class="card-subtitle mb-2 text-muted"></h6>
+        <p id="search-result-description"></p>
+        <p id="search-result-type"></p>
+      </div>
+    </div>
 
   </div>
 
+</div>
+
 
   <body>
-    <script src="findwork-function.js"></script>
-    <script src="findwork.js"></script>
 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="findwork.js"></script>
   </body>
 </html>
