@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/findwork.css">
     <title>Findwork</title>
   </head>
@@ -20,16 +20,16 @@
           <input class="form-control" id="searchByKeyword" type="text" name="" placeholder="Search by keyword">
         </div>
         <div class="col">
-          <input class="form-control" id="searchByLocation" type="text" name="" placeholder="location / city">
+          <input class="form-control" id="searchByLocation" type="text" name="" placeholder="Location / City">
         </div>
       </div>
 
       <button id="btn-post-job">Post Job</button>
       <form id="post-job">
-        <input class="form-control" type="text" name="title" placeholder="title">
-        <input class="form-control" type="text" name="location" placeholder="location">
-        <textarea class="form-control description" type="text" name="description" placeholder="description"></textarea>
-        <input class="form-control" type="text" name="type" placeholder="type">
+        <input class="form-control" type="text" name="title" placeholder="title" required >
+        <input class="form-control" type="text" name="location" placeholder="location" required>
+        <textarea class="form-control description" type="text" name="description" placeholder="description" required></textarea>
+        <input class="form-control" type="text" name="type" placeholder="type" required>
         <button id="btn-submit-job">Submit</button>
       </form>
 

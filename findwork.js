@@ -1,20 +1,20 @@
 // initial declear findwork data
 let findworks = [{
-  title: 'Admin / Supervisory, Business Administration',
-  location: 'Attleboro',
-  description: 'To provide financial, Administrative and clerical support to staff and Manager of Area Program so that they can give primary focus to facilitating community development processes.',
+  title: 'Calibration Technician',
+  location: 'Norton, MA',
+  description: 'The Calibration Technician I reports directly to the Team Leader, Manager, or Director depending on the organizational structure. This is a full time, hourly position. Twenty five to Fifty percent travel may be required based on project and client needs.',
   type: 'Full time'
   },
   {
-    title: 'Finance, Business',
-    location: 'Boston',
-    description: 'To Provide assistance to Admin Unit and Administration office for efficient and smooth day to day adminsitration services such as courier service, asset management, kitchen and rest room supply, office.',
+    title: 'Customer Service Assistant',
+    location: 'Attleboro, MA',
+    description: 'We are currently seeking new candidates in our online market research department in Attleboro, Massachusetts - MA. We are growing at a rapid rate and are looking for high-energy and passionate people who enjoy helping people and a chance to work from the comfort of your home.',
     type: 'Full time'
   },
   {
-    title: 'Execute. / Management, Sales / Marketing',
+    title: 'Residential Support Staff',
     location: 'Boston',
-    description: 'Sales Manager is responsible for the smooth functioning of the sales department',
+    description: 'Our mission is to teach, support, and empower people with developmental disabilities and their families to live meaningful lives of their choice. Our vision is a world where individual differences are appreciated and celebrated, and where everyone contributes.',
     type: 'Part time'
     }]
 
@@ -55,8 +55,8 @@ const renderFindwork = function (findworks, filter){
 
     findWorkTitle.textContent = findwork.title
     findWorkLocation.textContent = findwork.location
-   findWorkDescription.textContent = `Description: ${findwork.description}`
-   findWorkType.textContent = `Type: ${findwork.type}`
+    findWorkDescription.textContent = `Description: ${findwork.description}`
+    findWorkType.textContent = `Type: ${findwork.type}`
 
     const title = document.querySelector('#search-result-title')
     const fragment = document.createDocumentFragment();
@@ -88,7 +88,7 @@ document.querySelector('#searchByKeyword').addEventListener('input', function (e
 document.querySelector("#post-job").style.display = "none"
 
 document.querySelector('#btn-post-job').addEventListener('click', function(){
-  document.querySelector("#post-job").style.display = "block"
+document.querySelector("#post-job").style.display = "block"
 })
 
 
