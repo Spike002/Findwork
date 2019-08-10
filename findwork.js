@@ -36,37 +36,54 @@ const renderFindwork = function (findworks, filter){
   const findByKeywork = findByLocation.filter(function (findwork){
     return findwork.title.toLowerCase().includes(filter.keyword.toLowerCase())
   })
-
-  document.querySelector('#search-result-title').innerHTML = " ";
-  document.querySelector('#search-result-Location').innerHTML = " ";
-  document.querySelector('#search-result-description').innerHTML = " ";
-  document.querySelector('#search-result-type').innerHTML = " ";
+  document.querySelector('#search-result').innerHTML = " ";
+  // document.querySelector('#search-result-title').innerHTML = " ";
+  // document.querySelector('#search-result-Location').innerHTML = " ";
+  // document.querySelector('#search-result-description').innerHTML = " ";
+  // document.querySelector('#search-result-type').innerHTML = " ";
 
 
   console.log(findByKeywork);
-
+  let result ='';
   // Generate Job list to DOM
   findByKeywork.forEach(function (findwork){
-    const findWorkTitle = document.createElement('h3')
-    const findWorkLocation = document.createElement('h6')
+    // const findWorkTitle = document.createElement('h3')
+    // const findWorkLocation = document.createElement('h6')
+    //
+    // const findWorkDescription = document.createElement('p')
+    // const findWorkType = document.createElement('em')
+    //
+    // findWorkTitle.textContent = findwork.title
+    // findWorkLocation.textContent = findwork.location
+    // findWorkDescription.textContent = `Description: ${findwork.description}`
+    // findWorkType.textContent = `Type: ${findwork.type}`
+    //
+    // const title = document.querySelector('#search-result-title')
+    // const fragment = document.createDocumentFragment();
+    // fragment.appendChild(findWorkTitle);
+    // fragment.appendChild(findWorkLocation);
+    // fragment.appendChild(findWorkDescription);
+    // fragment.appendChild(findWorkType);
+    // title.appendChild(fragment);
 
-    const findWorkDescription = document.createElement('p')
-    const findWorkType = document.createElement('em')
+    result += `
+    <div class="card">
+      <div class="card-body">
+        <h5 id="search-result-title" class="card-title"><strong>${findwork.title}</strong></h5>
+        <h6 id="search-result-Location" class="card-subtitle mb-2 text-muted">${findwork.location}</h6>
+        <p id="search-result-description">${findwork.description}</p>
+        <p id="search-result-type">${findwork.type}</p>
+      </div>
+    </div>
+    `;
 
-    findWorkTitle.textContent = findwork.title
-    findWorkLocation.textContent = findwork.location
-    findWorkDescription.textContent = `Description: ${findwork.description}`
-    findWorkType.textContent = `Type: ${findwork.type}`
 
-    const title = document.querySelector('#search-result-title')
-    const fragment = document.createDocumentFragment();
-    fragment.appendChild(findWorkTitle);
-    fragment.appendChild(findWorkLocation);
-    fragment.appendChild(findWorkDescription);
-    fragment.appendChild(findWorkType);
-    title.appendChild(fragment);
   })
+
+  document.querySelector('#search-result').innerHTML = result;
 }
+
+
 
 // Show Default Job list when initial start
 renderFindwork(findworks, filters)
