@@ -17,10 +17,34 @@ textarea{
   height: 150px !important;
 }
 
-.card{
+.search-job-result{
   width: 100%;
-  margin: 10px 0;
-  background-color: #DAD2D2;
+  padding: 10px 10px;
+  margin: 0 0 10px 0;
+  background-color: #F0EFE4;
+  height: 120px;
+  line-height:25px; /* Height / no. of lines to display */
+  overflow:hidden;
+  border-radius: 5px;
+}
+
+.search-job-result p{
+  margin-bottom: 30px;
+}
+
+.leftSide{
+  display: block;
+  background-color: #F0EFE4;
+  height: 635px;
+  overflow: scroll;
+}
+
+
+.rightSide{
+  display: block;
+  background-color: none;
+  height: 635px;
+  overflow: scroll;
 }
 
 #btn-post-job {
@@ -47,10 +71,13 @@ textarea{
   background-color: #fff;
   color: #DEAE2A;
   border: 2px solid #DEAE2A;
+  margin-bottom: 50px;
+
 }
 
 #btn-submit-job:hover{
   background-color: #DEAE2A;
   color: #fff;
   border-radius: 5px;
+
 }
