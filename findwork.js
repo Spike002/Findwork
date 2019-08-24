@@ -15,6 +15,7 @@ function showFullJobdescription(id = '315c81c0-bb80-4991-973d-1fec6f190543'){
           <h4>${work.location}</h4>
           <p>${work.type}</p>
           <p>${work.description}</p>
+          <em>Posted at ${moment(work.postedAt).fromNow()}</em>
         </div>
 
   `
@@ -22,6 +23,10 @@ function showFullJobdescription(id = '315c81c0-bb80-4991-973d-1fec6f190543'){
 
 }
 
+// Show less text
+const showLessText = function (text){
+  return `${text.slice(0,50)}...`;
+}
 
 // filter job list by location and keyword
 const renderFindwork = function (findworks, filter){
@@ -37,22 +42,23 @@ const renderFindwork = function (findworks, filter){
   let result ='';
   // Generate Job list to DOM
   findByKeywork.forEach(function (findwork){
+    const lessText = showLessText(findwork.description)
     result += `
     <div onclick="showFullJobdescription('${findwork.id}')">
       <div class="search-job-result">
         <h5><strong>${findwork.title}</strong></h5>
         <h6>${findwork.location}</h6>
-        <p>${findwork.description}</p>
+        <p>${lessText}</p>
+        <em>Posted at ${moment(findwork.postedAt).fromNow()}</em>
+
       </div>
     </div>
     `;
-
-
   })
+
 
   document.querySelector('#search-result').innerHTML = result;
 }
-
 // Show Default Job list when initial start
 renderFindwork(findworks, filters)
 
@@ -82,13 +88,16 @@ document.querySelector("#post-job").style.display = "block"
 document.querySelector('#post-job').addEventListener('submit', function(e){
   e.preventDefault()
   const id = uuidv4();
+  const timestamp = moment().valueOf()
   findworks.unshift({
     id: id,
     title: e.target.elements.title.value,
     location: e.target.elements.location.value,
     description: e.target.elements.description.value,
-    type: e.target.elements.type.value
+    type: e.target.elements.type.value,
+    postedAt: timestamp
   })
   document.querySelector("#post-job").style.display = "none"
   renderFindwork(findworks, filters)
+  console.log(findworks);
 })

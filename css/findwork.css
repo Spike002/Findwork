@@ -22,15 +22,15 @@ textarea{
   padding: 10px 10px;
   margin: 0 0 10px 0;
   background-color: #F0EFE4;
-  height: 120px;
-  line-height:25px; /* Height / no. of lines to display */
+  height: 200px;
+  line-height:25px; /* Height / no. of lines to display  */
   overflow:hidden;
   border-radius: 5px;
 }
 
-.search-job-result p{
+/* .search-job-result p{
   margin-bottom: 30px;
-}
+} */
 
 .leftSide{
   display: block;
@@ -79,5 +79,19 @@ textarea{
   background-color: #DEAE2A;
   color: #fff;
   border-radius: 5px;
+
+}
+
+@media screen and (max-width: 767px){
+
+  .rightSide h3{
+    margin-top: 30px;
+  }
+
+  .search-job-result{
+
+    height: 160px;
+
+  }
 
 }
